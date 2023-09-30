@@ -1,79 +1,80 @@
-<svg fill="none" viewBox="0 0 600 300" width="600" height="300" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" viewBox="0 0 1200 150" width="1200" height="150" xmlns="http://www.w3.org/2000/svg">
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
-        @keyframes hi  {
-            0% { transform: rotate( 0.0deg) }
-           10% { transform: rotate(14.0deg) }
-           20% { transform: rotate(-8.0deg) }
-           30% { transform: rotate(14.0deg) }
-           40% { transform: rotate(-4.0deg) }
-           50% { transform: rotate(10.0deg) }
-           60% { transform: rotate( 0.0deg) }
-          100% { transform: rotate( 0.0deg) }
-        }
-
-        @keyframes gradient {
+        
+        @keyframes cat  {
+          from {
+            --visibilityCatLeft: visible;
+            --visibilityCatRight: hidden;
+          }
           0% {
-            background-position: 0% 50%;
+            left: 1000px;
           }
           50% {
-            background-position: 100% 50%;
+            left: 50px;
           }
           100% {
-            background-position: 0% 50%;
+            left: 1000px;
           }
+          to {
+            --visibilityCatLeft: hidden;
+            --visibilityCatRight: visible;
+          }
+        }
+        
+        @keyframes spriteVisibility {
+          
+          
         }
 
         .container {
-          --color-main: #5452ee;
-          --color-primary: #e73c7e;
-          --color-secondary: #23a6d5;
-          --color-tertiary: #ffff;
-
-          background: linear-gradient(-45deg, var(--color-main), var(--color-primary), var(--color-secondary), var(--color-tertiary));
-          background-size: 400% 400%;
-          animation: gradient 15s ease infinite;
-
           width: 100%;
-          height: 300px;
-
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          color: white;
-
+          height: 150px;
           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         }
 
-        .hi {
-          animation: hi 1.5s linear -0.5s infinite;
-          display: inline-block;
-          transform-origin: 70% 70%;
+        .catLeft,.catRight,.catStanding {
+          left: 1000px;
+          position:absolute;
+          animation: cat 15s linear infinite;
+        }
+        
+        .catLeft {
+          visibility: var(--visibilityCatLeft);
         }
 
-        @media (prefers-color-scheme: light) {
-          .container {
-            --color-main: #F15BB5;
-            --color-primary: #24b0ef;
-            --color-secondary: #4526f6;
-            --color-tertiary: #f6f645;
-          }
+        .catRight {
+          visibility: var(--visibilityCatRight);
+        }
+
+        .catStanding {
+          visibility: hidden;
+        }
+
+        .pixelart {
+          image-rendering: pixelated;
+          image-rendering: -moz-crisp-edges;
+          image-rendering: crisp-edges;
         }
 
         @media (prefers-reduced-motion) {
           .container {
             animation: none;
           }
-
-          .hi {
-            animation: none;
-          }
         }
       </style>
 
       <div class="container">
-        <h1>Hi there, my name is Nikola <div class="hi">👋</div></h1>
+        <div class="catLeft">
+          <img class="pixelart" width="200px" src='data:image/gif;base64,R0lGODlhGQATAOMHAM55JkRFRgAAAP39/JKSkvG9anAtAP///////////////////////////////////yH/C05FVFNDQVBFMi4wAwEAAAAh+QQJFAADACwAAAAAGQATAAAEfXDISau9uJqdjfWUAQCgVpSDiKZBsKbnto2vcX5FkBcj+bmmnY5HCxVuRkHhcFTSZIbWanM8CJjH4ywAQGoOBxl4HAXoXqnUeB0+ZdETKHQJ1mZCBvYa/s2HoWEEdwMEeYYEhWGBghmIG4uPi4OOBoiUlYyTlpuWgxWciBkRACH5BAkUAAMALAAAAAAZABMAAAR6cMhJq7046z2Mx4YVVgYAjJRRoN0pBqykerQZd6tYBHthuiQYqdDj+WwpYkwlKByITRvNEBCmVE7Bk6gsBQA50eFAG5upAN6t0zG7ySvuejKdOsdKTsfwdhsIG3xkfFODBIAZNASEgmSHiBmPi3+Kh3qSmJZ6EpmQFhEAIfkECRQAAwAsAAAAABkAEwAABH1wyEmrvbianY31lAEAoFaUg4imQbCm57aNr3F+RZAXI/m5pp2ORwsVbkZB4XBU0mSG1mpzPAiYx+MsAEBqDgcZeBwF6F6p1HgdPmXREyh0CdZmQgb2Gv7Nh6FhBHcDBHmGBIVhgYIZiBuLj4uDjgaIlJWMk5abloMVnIgZEQAh+QQJFAADACwAAAAAGQATAAAEenDISau9OOs9jMeGFVYGAIyUUaDdKQaspHq0GXerWAR7YbokGKnQ4/lsKWJMJSgciE0bzRAQplROwZOoLAUAOdHhQBubqQDerdMxu8kr7noynTrHSk7H8HYbCBsEBHxkdWN/GoOHfx6CfIgaNIKTjpCBlJiAehKZmhcRADs=' />
+        </div>
+        <div class="catRight">
+          <img class="pixelart" width="200px" src='data:image/gif;base64,R0lGODlhGQATAOMHAM55JkRFRgAAAP39/JKSkvG9anAtAP///////////////////////////////////yH/C05FVFNDQVBFMi4wAwEAAAAh+QQJFAADACwAAAAAGQATAAAEfHDISau902jMqQGAUYnjZQQBmRXq8LWSwVoyq2khndJFXwS/3KjXqvmAQKEHddP4BL1DAQqLFQCBkDEqkNpMwdRhPL6VMUaZgcw+iKqu6NjW3HDWbbK9Q1jXy24dAwR9bm6Efod8hW4GiI2EgogahJORgoOVmpWYFJuXFxEAIfkECRQAAwAsAAAAABkAEwAABHZwyEmrvThrw7U3AGBYY1WawTkZhQqqEgsPbMtxIpmSRV8Ev5yp5/L1gEAhxRBI3WoFQe8QbV1YgIAIOhVQbddg6kAm38wYqKzMPoxmtCnZ9uxgCIY2257Bm+tmBAQafgaCHHh5boOEiIKPiXAWkJSCHhWVjBcRACH5BAkUAAMALAAAAAAZABMAAAR8cMhJq73TaMypAYBRieNlBAGZFerwtZLBWjKraSGd0kVfBL/cqNeq+YBAoQd10/gEvUMBCosVAIGQMSqQ2kzB1GE8vpUxRpmBzD6Iqq7o2NbccNZtsr1DWNfLbh0DBH1uboR+h3yFbgaIjYSCiBqEk5GCg5WalZgUm5cXEQAh+QQJFAADACwAAAAAGQATAAAEdnDISau9OGvDtTcAYFhjVZrBORmFCqoSCw9sy3EimZJFXwS/nKnn8vWAQCHFEEjdagVB7xBtXViAgAg6FVBt12DqQCbfzBiorMw+jGa0Kdn27GAIhjbbniHg809ueW4afnhlHG5/cBSGN3+GBB4SkZV+k42WGREAOw==' />
+        </div>
+        <div class="catStanding">
+          <img class="pixelart" width="200px" src='data:image/gif;base64,' />
+        </div>
       </div>
     </div>
   </foreignObject>
