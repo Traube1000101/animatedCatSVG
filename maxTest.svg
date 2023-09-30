@@ -1,0 +1,31 @@
+<svg fill="none" viewBox="0 0 600 300" width="600" height="300" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        #a:hover ~ #color {
+          color : red;
+        }
+        #b:hover ~ #color {
+          color : green;
+        }
+        #c:hover ~ #color {
+          color : blue;
+        }
+      </style>
+
+      <span id="a">
+        hey
+      </span>
+      <span id="b">
+        du
+      </span>
+      <span id="c">
+        nudel
+      </span>
+      <span id="color">
+        °
+      </span>
+    </div>
+    </div>
+  </foreignObject>
+</svg>
