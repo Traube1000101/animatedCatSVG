@@ -2,42 +2,35 @@
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
-        
         @keyframes cat  {
           from {
             --visibilityCatLeft: visible;
             --visibilityCatRight: hidden;
-          }
-          0% {
+            --visibilityCatStanding: hidden;
             left: 1980px;
           }
           50% {
             left: 20px;
           }
-          100% {
-            left: 1980px;
-          }
           to {
             --visibilityCatLeft: hidden;
             --visibilityCatRight: visible;
+            --visibilityCatStanding: hidden;
+            left: 1980px;
           }
         }
         
-        @keyframes spriteVisibility {
-          
-          
-        }
-
-        .container {
-          width: 100%;
-          height: 150px;
-          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        }
-
         .catLeft,.catRight,.catStanding {
           left: 1000px;
           position:absolute;
           animation: cat 30s linear infinite;
+          animation-delay: 0s;
+        }
+        
+        .container {
+          width: 100%;
+          height: 150px;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         }
         
         .catLeft {
@@ -49,7 +42,7 @@
         }
 
         .catStanding {
-          visibility: hidden;
+          visibility: var(--visibilityCatStanding);
         }
 
         .pixelart {
@@ -73,7 +66,7 @@
           <img class="pixelart" width="200px" src='data:image/gif;base64,R0lGODlhGQATAOMHAM55JkRFRgAAAP39/JKSkvG9anAtAP///////////////////////////////////yH/C05FVFNDQVBFMi4wAwEAAAAh+QQJFAADACwAAAAAGQATAAAEfHDISau902jMqQGAUYnjZQQBmRXq8LWSwVoyq2khndJFXwS/3KjXqvmAQKEHddP4BL1DAQqLFQCBkDEqkNpMwdRhPL6VMUaZgcw+iKqu6NjW3HDWbbK9Q1jXy24dAwR9bm6Efod8hW4GiI2EgogahJORgoOVmpWYFJuXFxEAIfkECRQAAwAsAAAAABkAEwAABHZwyEmrvThrw7U3AGBYY1WawTkZhQqqEgsPbMtxIpmSRV8Ev5yp5/L1gEAhxRBI3WoFQe8QbV1YgIAIOhVQbddg6kAm38wYqKzMPoxmtCnZ9uxgCIY2257Bm+tmBAQafgaCHHh5boOEiIKPiXAWkJSCHhWVjBcRACH5BAkUAAMALAAAAAAZABMAAAR8cMhJq73TaMypAYBRieNlBAGZFerwtZLBWjKraSGd0kVfBL/cqNeq+YBAoQd10/gEvUMBCosVAIGQMSqQ2kzB1GE8vpUxRpmBzD6Iqq7o2NbccNZtsr1DWNfLbh0DBH1uboR+h3yFbgaIjYSCiBqEk5GCg5WalZgUm5cXEQAh+QQJFAADACwAAAAAGQATAAAEdnDISau9OGvDtTcAYFhjVZrBORmFCqoSCw9sy3EimZJFXwS/nKnn8vWAQCHFEEjdagVB7xBtXViAgAg6FVBt12DqQCbfzBiorMw+jGa0Kdn27GAIhjbbniHg809ueW4afnhlHG5/cBSGN3+GBB4SkZV+k42WGREAOw==' />
         </div>
         <div class="catStanding">
-          <img class="pixelart" width="200px" src='data:image/gif;base64,' />
+          <img class="pixelart" width="200px" src='data:image/gif;base64,R0lGODlhGQAUAOMHAM55JkRFRgAAAP39/JKSkvG9anAtAP///////////////////////////////////yH/C05FVFNDQVBFMi4wAwEAAAAh+QQJFAADACwAAAAAGQAUAAAEanDISYe5NWtqgNlgZQRfaBpFaYKjumZokb6iFdyfe6ZA33c6luxC/NFihUCyYFwhl0qmxykTyA7V4cmAvQq6hQMmxD2YiebziVBOuw3sEGFOrF/mBDm+zMfn9WxigXBzL3twd4U0A354IBEAIfkECRQAAwAsAAAAABkAFAAABG1wyEmrvdZozKsBgdGNg1EUIskZoYqZZ+pKIhu0Mml+QA98uQ5MQ+wFV6dCQFkwqmCn5bL5050Ep8M1NtJos4Jv4bARHs5kL/roIRjQ8LPB3SHYiXiNnVDfv8lye3x9bmSFc3YqfnN6iTOCexwRACH5BAkUAAMALAAAAAAZABQAAARqcMhJh7k1a2qA2WBlBF9oGkVpgqO6ZmiRvqIV3J97pkDfdzqW7EL80WKFQLJgXCGXSqbHKRPIDtXhyYC9CrqFAybEPZiJ5vOJUE67DewQYU6sX+YEOb7Mx+f1bGKBcHMve3B3hTQDfnggEQAh+QQJFAADACwAAAAAGQAUAAAEa3DISau9WJqduw6A4WVGUYgjZgRoapVm6w7iGrD0XBpA3/OyDmxD/LlghUCyYBwhl0pmyGkSmA7VmGeDvQq6hQNHeCiLuebgi2Awu8sGdodAJ9o3dMI83xbD83p7bGKDcXQpfHF4hzOAeRkRADs=' />
         </div>
       </div>
     </div>
