@@ -24,7 +24,7 @@
         .catLeft,.catRight,.catStanding {
           left: -210pxpx;
           position:absolute;
-          animation: cat 20s linear infinite;
+          animation: cat 28s linear infinite;
           animation-delay: 0s;
         }
         
