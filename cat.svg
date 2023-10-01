@@ -22,10 +22,10 @@
         }
         
         .catLeft,.catRight,.catStanding {
-          left: -210pxpx;
+          left: -210px;
           position:absolute;
           animation: cat 28s linear infinite;
-          animation-delay: 0s;
+          animation-delay: 1s;
         }
         
         .container {
