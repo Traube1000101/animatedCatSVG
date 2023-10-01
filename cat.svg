@@ -1,29 +1,30 @@
-<svg fill="none" viewBox="0 0 2200 150" width="2200" height="150" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" viewBox="0 0 2000 150" width="2000" height="150" xmlns="http://www.w3.org/2000/svg">
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
         @keyframes cat  {
           from {
-            --visibilityCatLeft: visible;
-            --visibilityCatRight: hidden;
-            --visibilityCatStanding: hidden;
-            left: 1980px;
-          }
-          50% {
-            left: 20px;
-          }
-          to {
+            left: -210px;
             --visibilityCatLeft: hidden;
             --visibilityCatRight: visible;
             --visibilityCatStanding: hidden;
-            left: 1980px;
+            
+          }
+          50% {
+            left: 2010px;
+          }
+          to {
+            --visibilityCatLeft: visible;
+            --visibilityCatRight: hidden;
+            --visibilityCatStanding: hidden;
+            left: -210px;
           }
         }
         
         .catLeft,.catRight,.catStanding {
-          left: 1000px;
+          left: -210pxpx;
           position:absolute;
-          animation: cat 30s linear infinite;
+          animation: cat 20s linear infinite;
           animation-delay: 0s;
         }
         
